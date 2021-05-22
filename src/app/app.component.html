@@ -1,0 +1,29 @@
+<ion-app>
+	<ion-header>
+    <ion-toolbar>
+	<ion-title>Agora Stream : UID({{uid}})</ion-title>  
+  <button ion-button (click)="leave()">LEAVE</button>
+  <button ion-button (click)="joinAgain()">JOIN</button>
+  <button ion-button (click)="PushToconsole()">Details</button>
+  
+</ion-toolbar>
+  </ion-header>
+ 
+
+<ion-content>
+
+<button ion-button (click)="PushToconsole()">Show RemoteCalls</button>
+
+<div *ngFor="let callId of remoteCalls" [id]="callId" class="remote">Remote</div>
+
+<div [id]="localCallId" class="local">Local</div>
+
+
+
+<!-- <ion-item *ngFor="let callId of remoteCalls" [id]="callId" > 
+  {{callId}}
+</ion-item> -->
+
+</ion-content>
+
+</ion-app>
